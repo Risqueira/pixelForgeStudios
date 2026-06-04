@@ -2,10 +2,12 @@
     font-family: 'press';
     src: url(fonts/Press_Start_2P/PressStart2P-Regular.ttf);
 }
+
 @font-face {
     font-family: 'montserrat';
     src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
 }
+
 @font-face {
     font-family: 'roboto';
     src: url(fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
@@ -13,111 +15,112 @@
 
 
 /*Configuração geral da página*/
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body, h1, h2, p, ul, li{
+body,
+h1,
+h2,
+p,
+ul,
+li {
     margin: 0;
     padding: 0;
     background-color: #463f3a;
 }
 
 /*Configuração do header*/
-header{
+header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color:blueviolet;
+    background-color: blueviolet;
     position: relative;
 }
 
-menu{
-    display:none;
+menu {
+    display: none;
     width: 100%;
     order: 3;
 }
 
-menu>ul{
+menu>ul {
     list-style-type: none;
 }
 
-menu>ul>li>a{
-    display:block;
+menu>ul>li>a {
+    display: block;
     padding: 10px;
     text-decoration: none;
     text-align: center;
     background-color: rgb(87, 87, 87);
     color: white;
-    border-top:2px solid gray;
+    border-top: 2px solid gray;
 }
 
 /*Configuração do hambuguer*/
-i#burguer{
-    background-color: rgb(48,48,48);
+i#burguer {
+    background-color: rgb(48, 48, 48);
     color: white;
     display: block;
     text-align: center;
     padding: 10px;
     cursor: pointer;
-    transition: 0.5s background;    
-}
-
-i#burguer:hover{
-    background-color: white;
-    color:black;
     transition: 0.5s background;
 }
 
-/*CSS dos cards dos jogos*/
-.main{
-  display: flex;
-  justify-content: center;
-
+i#burguer:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s background;
 }
 
 /*Configuração da seção "Sobre"*/
-#sobre{
+#sobre {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 20px 20px;
 }
-#sobre>h2{
+
+#sobre>h2 {
     font-size: 90px;
     font-family: 'press';
     color: rgb(65, 11, 65);
     margin-bottom: 20px;
     margin-top: 20px;
 }
-#sobre>h2:hover{
+
+#sobre>h2:hover {
     transform: scale(1.05) translateY(-5px);
     box-shadow: 0 5px 15px #1b046750;
     padding: 20px;
 }
-#sobre>p{
+
+#sobre>p {
     font-size: 18px;
     font-family: 'montserrat';
 
 }
 
 /*Configuração do banner*/
-#banner{
+#banner {
     width: 100%;
     height: 400px;
     background-image: url(assets/img/banner.png);
     background-size: cover;
     background-position: center;
     margin-top: 20px;
-}   
+}
 
 /*Configuração dos cards dos jogos*/
-#jogos{
+#jogos {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,47 +128,130 @@ i#burguer:hover{
     font-family: 'montserrat';
 }
 
-.card{
-    margin: 50px;
-    background-color: wheat ;
+/*CSS dos cards dos jogos*/
+.main {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(300px, 500px));
+    gap: 40px; /*espaço horizontal e vertical*/
+    margin: 20px;
+}
+
+.card {
     color: white;
-    width: 400px;
-    height: 570px;
+    width: 500px;
+    height: 470px;
     text-align: center;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
-    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-    rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+        rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.card>img{
+
+.card>img {
     width: 100%;
+    height: 270px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.card>h1{
-   font-size: 25px;
-   padding-top: 10px;
+
+.card>h1 {
+    font-size: 25px;
+    padding-top: 10px;
 }
-.card>p{
+
+.card>p {
     font-size: 17px;
     padding: 10px 20px;
 }
 
-.btn {
-    font-size: 17px;
-    padding: 10px 50px;
-    border: none;
-    background-color: darkblue;
-    color: #fff;
-    border-radius: 10px;
-    font-weight: 600;
-    transition: 0.5s background;
-    cursor: pointer;
+/*Section de gameplay*/
+#gameplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
 }
-.btn:hover{
-    background-color: blue;
-    transition: 0.5s background;
+#gameplay>h2{
+    font-size: 40px;
+    font-family: 'press';
+    padding: 20px;
 }
+.video{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 400px;
+    padding: 20px;
+    margin: 20px;
+}
+
+#Formulario{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 350px;
+    width: 100%;  
+    background-color: rgb(87, 87, 87);
+}
+#Formulario>h3{
+    font-size: 25px;
+    font-family: 'montserrat';
+    color: white;
+}
+/*Arrumar depois font-size dos titulos da label nome, email, opniao*/
+#Formulario form{
+    width: 50%;
+    max-width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+}
+#Formulario input[type="text"]{
+    width: 100%;
+    padding:12px;
+    font-size: 16px;
+    margin-top:8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#Formulario input[type="submit"],
+#Formulario input[type="reset"]{
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border:none;
+    background-color: blueviolet;
+    color: white;
+    cursor:pointer;
+}
+#Formulario label[for="opniao"]{
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#Formulario textarea{
+    width: 100%;
+    height: 80px;
+    padding: 12px;
+    border-radius: 5px;
+    resize: none;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; 
+    height: 100px;
+    
+    background-color: blueviolet;
+}
+
+
 
 /*configuraçao para telefone*/
 @media screen and (max-width: 768px),
