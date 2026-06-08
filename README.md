@@ -31,13 +31,17 @@ Desenvolver um site institucional para uma empresa fictícia de desenvolvimento 
 pixelForgeStudios/
 │
 ├── assets/
-│   ├── fonts/
-│   └── img/
+│   ├── img/
+│   └── fonts/
+│
+├── scripts/
+│   └── script.js
+│
+├── styles/
+│   └── styles.css
 │
 ├── index.html
 ├── comunity.html
-├── styles.css
-├── script.js
 └── README.md
 ```
 
